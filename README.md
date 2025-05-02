@@ -49,7 +49,7 @@ END;
 
 ### Risk Matrix: Life Satisfaction vs Work Hours
 
-<img src="Visuals/dashboard_life_satisfaction.png" alt="Risk Profile Matrix" width="700"/>
+<img src="Visuals/dashboard_life_satisfaction.png" alt="Risk Profile Matrix" width="900"/>
 
 - **Low-Risk** individuals cluster above the average line in life satisfaction.
 - **High-Risk** individuals tend to work more and report below-average satisfaction.
@@ -62,7 +62,7 @@ END;
 
 ### Mental Health & Gender Trends
 
-<img src="Visuals/dashboard_gender_risk.png" alt="Gender Risk Trends" width="700"/>
+<img src="Visuals/dashboard_gender_risk.png" alt="Gender Risk Trends" width="900"/>
 
 - **Females** report higher anxiety and mood disorder rates but similar life satisfaction scores as males.
 - **Work hours** tend to be higher in males, but it does not seem to impact life satisfaction.

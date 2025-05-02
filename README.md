@@ -81,8 +81,7 @@ END;
 
 ## Risk Profile Classification Logic
 
-**SQL**
-```
+```sql
 CASE
   WHEN Stress_level IN ('Quite a bit stressful', 'Very stressful')
        AND Mental_health_state IN ('Poor', 'Fair')

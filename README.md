@@ -1,7 +1,8 @@
 
 # Uncovering Drivers of Life Satisfaction: A Healthcare Survey Analysis
 
-This project explores how various social, economic, and psychological factors influence **life satisfaction**. Leveraging data from a Canadian healthcare survey (https://www.kaggle.com/datasets/aradhanahirapara/healthcare-survey?select=Health_Dataset_Decoding_and_mapping_dictionary.docx), I applied **SQL** for data wrangling and **Tableau** for visualization to uncover patterns and segment respondents into **mental health risk profiles**.
+This project explores how various social, economic, and psychological factors influence **life satisfaction**. 
+Leveraging data from a Canadian healthcare survey (https://www.kaggle.com/datasets/aradhanahirapara/healthcare-survey?select=Health_Dataset_Decoding_and_mapping_dictionary.docx), I applied **SQL** for data wrangling and **Tableau** for visualization to uncover patterns and segment respondents into **mental health risk profiles**.
 
 > **Key Variables Explored**: Life satisfaction, income, stress, mental health, gender, and work hours.
 

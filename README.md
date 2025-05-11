@@ -5,7 +5,7 @@ This project explores how various social, economic, and psychological factors in
 
 > **Key Variables Explored**: Life satisfaction, income, stress, mental health, gender, and work hours.
 
-> **Link to Data**: (https://www.kaggle.com/datasets/aradhanahirapara/healthcare-survey?select=Health_Dataset_Decoding_and_mapping_dictionary.docx)
+> **Link to Data**: [Canadian Healthcare Survey Data](https://www.kaggle.com/datasets/aradhanahirapara/healthcare-survey?select=Health_Dataset_Decoding_and_mapping_dictionary.docx)
 
 ---
 
@@ -60,7 +60,7 @@ This logic was used to classify respondents into **Low**, **Medium**, or **High 
 
 ### Income vs Life Satisfaction
 
-<img src="visuals/IncomeLifeSat.png" alt="Income and Life Satisfaction Heatmap" width="500"/>
+<img src="Visuals/IncomeLifeSat.png" alt="Income and Life Satisfaction Heatmap" width="500"/>
 
 This heatmap clearly shows a **positive relationship between income and life satisfaction**:
 - Respondents earning **over $80,000** report the highest average life satisfaction (**8.31**).
@@ -71,7 +71,7 @@ This heatmap clearly shows a **positive relationship between income and life sat
 
 ### Mental Health & Stress vs Life Satisfaction
 
-<img src="visuals/Mental&StressLifeSat.png" alt="Mental Health and Stress vs Life Satisfaction" width="800"/>
+<img src="Visuals/Mental&StressLifeSat.png" alt="Mental Health and Stress vs Life Satisfaction" width="800"/>
 
 This dual bar chart reveals the **strong correlation between mental health, stress, and life satisfaction**:
 - Individuals with **excellent mental health** score an average of **8.9**, while those with **poor mental health** average just **4.4**.
@@ -85,7 +85,7 @@ These trends reinforce the impact of **psychological well-being** on how individ
 
 ### Multivariate Risk Profile Matrix
 
-<img src="visuals/RiskMatrix.png" alt="Multivariate Risk Matrix" width="700"/>
+<img src="Visuals/RiskMatrix.png" alt="Multivariate Risk Matrix" width="700"/>
 
 This scatterplot maps subgroups based on their **average weekly work hours (x-axis)** and **average life satisfaction (y-axis)**. The data points are color-coded by **risk profile** (Low, Medium, High), and bubble size represents the **number of respondents** in each group.
 

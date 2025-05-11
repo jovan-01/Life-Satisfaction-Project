@@ -105,8 +105,6 @@ This scatterplot maps subgroups based on their **average weekly work hours (x-ax
   - Occupy a **middle zone**, both in terms of hours and satisfaction (typically **6.0–7.5** life satisfaction and **35–40 work hours**).
   - This group could benefit most from **preventative interventions** in stress management and mental health support.
 
----
-
 #### Summary Table
 
 | Risk Profile  | Avg. Life Satisfaction | Avg. Work Hours   | Likely Interpretation                                 |
@@ -114,8 +112,6 @@ This scatterplot maps subgroups based on their **average weekly work hours (x-ax
 | Low Risk      | > 7.0                  | 35–42 hrs/week     | Balanced work-life; protected by good mental health/income |
 | Medium Risk   | 6.0–7.5                | 35–40 hrs/week     | Transitional zone; responsive to support              |
 | High Risk     | < 6.0                  | < 35 hrs/week      | Low satisfaction despite fewer hours; deeper issues present |
-
----
 
 **Conclusion**:  
 This matrix reveals that **work hours alone are not predictive of life satisfaction or mental health risk**. Instead, the interplay between **income, stress, and mental health** must be considered. In fact, **some high-risk individuals work fewer hours**, highlighting the importance of **psychosocial and economic support**, not just workload management. 

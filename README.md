@@ -71,7 +71,7 @@ This heatmap clearly shows a **positive relationship between income and life sat
 
 ### Mental Health & Stress vs Life Satisfaction
 
-<img src="Visuals/Mental&StressLifeSat.png" alt="Mental Health and Stress vs Life Satisfaction" width="800"/>
+<img src="Visuals/Mental&StressLifeSat.png" alt="Mental Health and Stress vs Life Satisfaction" width="1200"/>
 
 This dual bar chart reveals the **strong correlation between mental health, stress, and life satisfaction**:
 - Individuals with **excellent mental health** score an average of **8.9**, while those with **poor mental health** average just **4.4**.

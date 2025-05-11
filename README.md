@@ -136,8 +136,7 @@ This matrix reveals that **work hours alone are not predictive of life satisfact
 - A **multivariate risk matrix** shows:
   - **Low-risk individuals** report the highest satisfaction and often work more hours.
   - **High-risk individuals** report low satisfaction even with fewer work hours, emphasizing that **underlying mental and financial stressors** are more impactful than workload alone.
-
-In short, this project supports data-driven decision-making in both **healthcare** and **organizational settings** by uncovering the hidden drivers of well-being.
+- In short, this project supports data-driven decision-making in both **healthcare** and **organizational settings** by uncovering the hidden drivers of well-being.
 ---
 
 ## Real World Applications

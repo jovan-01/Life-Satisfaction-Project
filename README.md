@@ -43,20 +43,82 @@ SET Stress_level = CASE
 END;
 ```
 
+Risk Profile Classification Logic:
+```sql
+CASE
+  WHEN Stress_level IN ('Quite a bit stressful', 'Very stressful')
+       AND Mental_health_state IN ('Poor', 'Fair')
+       AND Total_income IN ('< $20,000', '$20,000 - $39,999')
+  THEN 'High Risk'
+  ...
+```
+
+This logic was used to classify respondents into **Low**, **Medium**, or **High Risk** mental health categories.
 ---
 
-## Dashboard Snapshots
+## Visualization Deep Dive
 
-### Risk Matrix: Life Satisfaction vs Work Hours
+### Income vs Life Satisfaction
 
-<img src="Visuals/dashboard_life_satisfaction.png" alt="Risk Profile Matrix" width="900"/>
+<img src="visuals/IncomeLifeSat.png" alt="Income and Life Satisfaction Heatmap" width="500"/>
 
-- **Low-Risk** individuals cluster above the average line in life satisfaction.
-- **High-Risk** individuals tend to work more and report below-average satisfaction.
-- **Bubble size** represents sample size; color encodes risk level.
+This heatmap clearly shows a **positive relationship between income and life satisfaction**:
+- Respondents earning **over $80,000** report the highest average life satisfaction (**8.31**).
+- Life satisfaction **decreases steadily** across income brackets, with those earning **under $20,000** reporting a much lower average (**7.23**).
+- This gradient suggests that **economic security plays a substantial role** in how individuals perceive their overall life satisfaction.
 
-- **Higher income** consistently predicts higher satisfaction.
-- **Mental health state** and **stress** strongly correlate with life satisfaction.
+---
+
+### Mental Health & Stress vs Life Satisfaction
+
+<img src="visuals/Mental&StressLifeSat.png" alt="Mental Health and Stress vs Life Satisfaction" width="800"/>
+
+This dual bar chart reveals the **strong correlation between mental health, stress, and life satisfaction**:
+- Individuals with **excellent mental health** score an average of **8.9**, while those with **poor mental health** average just **4.4**.
+- Similarly, **stress levels** show an inverse relationship with satisfaction:
+  - **Not at all stressful**: Avg satisfaction of **8.8**
+  - **Extremely stressful**: Avg satisfaction of only **6.0**
+
+These trends reinforce the impact of **psychological well-being** on how individuals evaluate their quality of life.
+
+---
+
+### Multivariate Risk Profile Matrix
+
+<img src="visuals/RiskMatrix.png" alt="Multivariate Risk Matrix" width="700"/>
+
+This scatterplot maps subgroups based on their **average weekly work hours (x-axis)** and **average life satisfaction (y-axis)**. The data points are color-coded by **risk profile** (Low, Medium, High), and bubble size represents the **number of respondents** in each group.
+
+#### Key Insights:
+
+- **High-Risk Individuals**:
+  - Tend to work **fewer hours** (generally **under 35 hours/week**).
+  - Still report **low life satisfaction** scores (between **4.0–6.0**).
+  - This indicates that **low workload does not equate to higher well-being**, other factors like **poor mental health, low income, or high stress** are likely at play.
+
+- **Low-Risk Individuals**:
+  - Work a **moderate to high number of hours** (often between **35–42 hours/week**).
+  - Still maintain **high life satisfaction**, often above **7.0**.
+  - Suggests that **resilience factors** (e.g., good mental health, higher income, low stress) may **buffer the effects of longer work hours**.
+
+- **Medium-Risk Individuals**:
+  - Occupy a **middle zone**, both in terms of hours and satisfaction (typically **6.0–7.5** life satisfaction and **35–40 work hours**).
+  - This group could benefit most from **preventative interventions** in stress management and mental health support.
+
+---
+
+#### Summary Table
+
+| Risk Profile  | Avg. Life Satisfaction | Avg. Work Hours   | Likely Interpretation                                 |
+|---------------|------------------------|--------------------|--------------------------------------------------------|
+| Low Risk      | > 7.0                  | 35–42 hrs/week     | Balanced work-life; protected by good mental health/income |
+| Medium Risk   | 6.0–7.5                | 35–40 hrs/week     | Transitional zone; responsive to support              |
+| High Risk     | < 6.0                  | < 35 hrs/week      | Low satisfaction despite fewer hours; deeper issues present |
+
+---
+
+**Conclusion**:  
+This matrix reveals that **work hours alone are not predictive of life satisfaction or mental health risk**. Instead, the interplay between **income, stress, and mental health** must be considered. In fact, **some high-risk individuals work fewer hours**, highlighting the importance of **psychosocial and economic support**, not just workload management. 
 
 ---
 
@@ -70,34 +132,24 @@ END;
 
 ---
 
-## Key Findings
+## Summary of Findings
 
-- **Mental health & stress** are stronger predictors of life satisfaction than income alone.
-- Individuals earning **> $80,000** report an average life satisfaction of **8.31**, compared to **7.22** for those under **$20,000**.
-- People with **poor mental health** average **4.5/10** in satisfaction, vs **8.9/10** for those with **excellent** mental health.
-- **Females** show higher levels of mood/anxiety disorders, yet their **average satisfaction** is slightly higher than males.
+- **Mental health and stress** are the most influential predictors of life satisfaction, more so than income or workload.
+- **High-income individuals** (>$80,000) report greater satisfaction (8.31), but those benefits decline with poor mental health.
+- **Gender patterns** reveal that females report more anxiety/mood disorders yet have slightly higher satisfaction scores than males, suggesting potential resilience or protective factors.
+- A **multivariate risk matrix** shows:
+  - **Low-risk individuals** report the highest satisfaction and often work more hours.
+  - **High-risk individuals** report low satisfaction even with fewer work hours, emphasizing that **underlying mental and financial stressors** are more impactful than workload alone.
 
+In short, this project supports data-driven decision-making in both **healthcare** and **organizational settings** by uncovering the hidden drivers of well-being.
 ---
 
-## Risk Profile Classification Logic
+## Real World Applications
 
-```sql
-CASE
-  WHEN Stress_level IN ('Quite a bit stressful', 'Very stressful')
-       AND Mental_health_state IN ('Poor', 'Fair')
-       AND Total_income IN ('< $20,000', '$20,000 - $39,999')
-  THEN 'High Risk'
-  ...
-```
-
-This logic was used to classify respondents into **Low**, **Medium**, or **High Risk** mental health categories.
-
----
-
-## Applications
-
-- **Healthcare Policy**: Design targeted interventions for high-risk groups.
-- **Workplace Wellness**: Balance workloads to reduce burnout and boost satisfaction.
+This analysis demonstrates how healthcare survey data can be transformed into practical insights that support:
+- **Targeted healthcare policy** in vulnerable populations
+- **Employer wellness strategies** that go beyond hours worked
+- **Evidence-based public policy** addressing life satisfaction through economic and psychological support
 - **Mental Health Campaigns**: Focus outreach on stressed, low-income individuals with poor mental health indicators.
 
 ---
@@ -106,7 +158,7 @@ This logic was used to classify respondents into **Low**, **Medium**, or **High 
 
 - **Predictive modeling**: Use machine learning to forecast life satisfaction
 - **Geographic comparisons**: Use regional data to study variation across provinces
-- **Time-series tracking**: Explore changes over time (if multi-year data is collected)
+- **Time-series tracking**: Explore changes over time
 
 ---
 
